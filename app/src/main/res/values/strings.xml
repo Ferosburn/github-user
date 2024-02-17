@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Github User</string>
+    <string name="search_github_user">Search GitHub user</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="following_followers">%1$d following · %2$d followers</string>
+    <string name="settings">Pengaturan</string>
+    <string name="favorite">Favorit</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="no_user">Tidak ada user</string>
+    <string name="share">Share</string>
+</resources>

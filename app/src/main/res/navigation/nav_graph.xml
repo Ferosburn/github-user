@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/searchUserFragment">
+
+    <fragment
+        android:id="@+id/searchUserFragment"
+        android:name="com.ferosburn.githubuser.ui.search_user.SearchUserFragment"
+        android:label="fragment_search_user"
+        tools:layout="@layout/fragment_search_user">
+        <action
+            android:id="@+id/action_searchUserFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
+        <action
+            android:id="@+id/action_searchUserFragment_to_favoriteUsersFragment"
+            app:destination="@id/favoriteUsersFragment" />
+        <action
+            android:id="@+id/action_searchUserFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.ferosburn.githubuser.ui.user_detail.UserDetailFragment"
+        android:label="fragment_user_detail"
+        tools:layout="@layout/fragment_user_detail">
+        <argument
+            android:name="login"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/followFragment"
+        android:name="com.ferosburn.githubuser.ui.user_detail.follows.FollowsFragment"
+        android:label="fragment_follow"
+        tools:layout="@layout/fragment_follow"/>
+    <fragment
+        android:id="@+id/favoriteUsersFragment"
+        android:name="com.ferosburn.githubuser.ui.favorite_users.FavoriteUsersFragment"
+        android:label="fragment_favorite_users"
+        tools:layout="@layout/fragment_favorite_users" >
+        <action
+            android:id="@+id/action_favoriteUsersFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.ferosburn.githubuser.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
